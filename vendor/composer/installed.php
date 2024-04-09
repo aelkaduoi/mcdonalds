@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '44d95623c4e6dbadf359778fc7094c5fbda8afa8',
+        'reference' => 'cb163ef91bdd0c3ecf587dbefe80221dd314ad9e',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '44d95623c4e6dbadf359778fc7094c5fbda8afa8',
+            'reference' => 'cb163ef91bdd0c3ecf587dbefe80221dd314ad9e',
             'dev_requirement' => false,
         ),
         'composer/semver' => array(
@@ -412,8 +412,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '3.0.0',
+                0 => '3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache-implementation' => array(
