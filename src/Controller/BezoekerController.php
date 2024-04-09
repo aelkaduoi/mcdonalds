@@ -41,7 +41,7 @@ class BezoekerController extends AbstractController
             $entityManager->persist($product);
             $entityManager->flush();
             $this->addFlash(
-                'succsess',
+                'success',
                 'Your changes were saved!'
             );
             return $this->redirectToRoute('app_product');
