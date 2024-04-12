@@ -62,16 +62,29 @@ class BezoekerController extends AbstractController
             'id' => $product->getId() ]);
 
     }
-    #[Route('/product/edit/{id}', name: 'product_edit')]
-    public function update(EntityManagerInterface $entityManager, int $id): Response
+    #[Route('/update/product/{id}', name: 'update_product')]
+    public function update(EntityManagerInterface $entityManager, Request $request, int $id): Response
     {
-        $product = $entityManager->getRepository(Product::class)->find($id);
-        $product->setName('New product name!');
-        $entityManager->flush();
-        return $this->redirectToRoute('app_product', [
-            'id' => $product->getId()
+        $product= $entityManager->getRepository(Product::class)->find($id);
+        $form= $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $task = $form->getData();
+            $entityManager->persist($product);
+            $entityManager->flush();
+            $this->addFlash(
+                'success',
+                'updated!'
+            );
+            return $this->redirectToRoute('app_product');
+
+        }
+        return $this->render('bezoeker/new.html.twig', [
+            'form'=>$form,
         ]);
     }
+
+
 
 }
 

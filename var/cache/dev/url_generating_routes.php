@@ -21,10 +21,10 @@ return [
     'app_product' => [[], ['_controller' => 'App\\Controller\\BezoekerController::products'], [], [['text', '/product']], [], [], []],
     'add_product' => [[], ['_controller' => 'App\\Controller\\BezoekerController::newproduct'], [], [['text', '/new/product']], [], [], []],
     'product_delete' => [['id'], ['_controller' => 'App\\Controller\\BezoekerController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/product/delete']], [], [], []],
-    'product_edit' => [['id'], ['_controller' => 'App\\Controller\\BezoekerController::update'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/product/edit']], [], [], []],
+    'update_product' => [['id'], ['_controller' => 'App\\Controller\\BezoekerController::update'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/update/product']], [], [], []],
     'App\Controller\BezoekerController::index' => [[], ['_controller' => 'App\\Controller\\BezoekerController::index'], [], [['text', '/bezoeker']], [], [], []],
     'App\Controller\BezoekerController::products' => [[], ['_controller' => 'App\\Controller\\BezoekerController::products'], [], [['text', '/product']], [], [], []],
     'App\Controller\BezoekerController::newproduct' => [[], ['_controller' => 'App\\Controller\\BezoekerController::newproduct'], [], [['text', '/new/product']], [], [], []],
     'App\Controller\BezoekerController::delete' => [['id'], ['_controller' => 'App\\Controller\\BezoekerController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/product/delete']], [], [], []],
-    'App\Controller\BezoekerController::update' => [['id'], ['_controller' => 'App\\Controller\\BezoekerController::update'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/product/edit']], [], [], []],
+    'App\Controller\BezoekerController::update' => [['id'], ['_controller' => 'App\\Controller\\BezoekerController::update'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/update/product']], [], [], []],
 ];

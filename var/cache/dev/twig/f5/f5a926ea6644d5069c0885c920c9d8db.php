@@ -72,45 +72,53 @@ class __TwigTemplate_3a36401bcae4839d1ba83ad4c923108e extends Template
             <thead class=\"thead-dark\">
             <tr>
                 <th>Name</th>
+                <th>Category</th>
                 <th>Price</th>
                 <th>Size</th>
                 <th>Amount</th>
+                <th>Delete</th>
+                <th>edit</th>
             </tr>
             </thead>
             <tbody>
             ";
-        // line 16
+        // line 19
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 16, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 19, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 17
+            // line 20
             echo "                <tr>
                     <td>";
-            // line 18
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 18), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 19), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "size", [], "any", false, false, false, 20), "html", null, true);
-            echo "</td>
-                    <td>";
             // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "stock", [], "any", false, false, false, 21), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 21), "html", null, true);
             echo "</td>
+                    <td>";
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "Category", [], "any", false, false, false, 22), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 23), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "size", [], "any", false, false, false, 24), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 25
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "stock", [], "any", false, false, false, 25), "html", null, true);
+            echo "</td>
+
                   <td>
                       <a class=\"btn btn-danger\" href=\"";
-            // line 23
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 23)]), "html", null, true);
+            // line 28
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 28)]), "html", null, true);
             echo "\">delete</a>
                   </td>
                     <td>
                         <a class=\"btn btn-warning\" href=\"";
-            // line 26
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 26)]), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("update_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 31)]), "html", null, true);
             echo "\">edit</a>
                     </td>
             ";
@@ -118,11 +126,11 @@ class __TwigTemplate_3a36401bcae4839d1ba83ad4c923108e extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 34
         echo "            </tbody>
         </table>
         <a class=\"btn btn-success\" href=\"";
-        // line 31
+        // line 36
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_product");
         echo "\">add</a>
     </div>
@@ -158,7 +166,7 @@ class __TwigTemplate_3a36401bcae4839d1ba83ad4c923108e extends Template
      */
     public function getDebugInfo()
     {
-        return array (  126 => 31,  122 => 29,  113 => 26,  107 => 23,  102 => 21,  98 => 20,  94 => 19,  90 => 18,  87 => 17,  83 => 16,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  134 => 36,  130 => 34,  121 => 31,  115 => 28,  109 => 25,  105 => 24,  101 => 23,  97 => 22,  93 => 21,  90 => 20,  86 => 19,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -172,23 +180,28 @@ class __TwigTemplate_3a36401bcae4839d1ba83ad4c923108e extends Template
             <thead class=\"thead-dark\">
             <tr>
                 <th>Name</th>
+                <th>Category</th>
                 <th>Price</th>
                 <th>Size</th>
                 <th>Amount</th>
+                <th>Delete</th>
+                <th>edit</th>
             </tr>
             </thead>
             <tbody>
             {% for product in products %}
                 <tr>
                     <td>{{ product.name }}</td>
+                    <td>{{ product.Category }}</td>
                     <td>{{ product.price }}</td>
                     <td>{{ product.size}}</td>
                     <td>{{ product.stock }}</td>
+
                   <td>
                       <a class=\"btn btn-danger\" href=\"{{ path('product_delete',{id:product.id}) }}\">delete</a>
                   </td>
                     <td>
-                        <a class=\"btn btn-warning\" href=\"{{ path('product_edit',{id:product.id}) }}\">edit</a>
+                        <a class=\"btn btn-warning\" href=\"{{ path('update_product',{id:product.id}) }}\">edit</a>
                     </td>
             {% endfor %}
             </tbody>

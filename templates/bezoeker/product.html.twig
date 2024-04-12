@@ -7,23 +7,28 @@
             <thead class="thead-dark">
             <tr>
                 <th>Name</th>
+                <th>Category</th>
                 <th>Price</th>
                 <th>Size</th>
                 <th>Amount</th>
+                <th>Delete</th>
+                <th>edit</th>
             </tr>
             </thead>
             <tbody>
             {% for product in products %}
                 <tr>
                     <td>{{ product.name }}</td>
+                    <td>{{ product.Category }}</td>
                     <td>{{ product.price }}</td>
                     <td>{{ product.size}}</td>
                     <td>{{ product.stock }}</td>
+
                   <td>
                       <a class="btn btn-danger" href="{{ path('product_delete',{id:product.id}) }}">delete</a>
                   </td>
                     <td>
-                        <a class="btn btn-warning" href="{{ path('product_edit',{id:product.id}) }}">edit</a>
+                        <a class="btn btn-warning" href="{{ path('update_product',{id:product.id}) }}">edit</a>
                     </td>
             {% endfor %}
             </tbody>
