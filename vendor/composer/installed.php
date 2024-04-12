@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'cb163ef91bdd0c3ecf587dbefe80221dd314ad9e',
+        'reference' => '80b91f25802e196fa9e681e19509800da2e442c3',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'cb163ef91bdd0c3ecf587dbefe80221dd314ad9e',
+            'reference' => '80b91f25802e196fa9e681e19509800da2e442c3',
             'dev_requirement' => false,
         ),
         'composer/semver' => array(

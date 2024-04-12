@@ -101,17 +101,28 @@ class __TwigTemplate_3a36401bcae4839d1ba83ad4c923108e extends Template
             // line 21
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "stock", [], "any", false, false, false, 21), "html", null, true);
             echo "</td>
-                </tr>
+                  <td>
+                      <a class=\"btn btn-danger\" href=\"";
+            // line 23
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 23)]), "html", null, true);
+            echo "\">delete</a>
+                  </td>
+                    <td>
+                        <a class=\"btn btn-warning\" href=\"";
+            // line 26
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 26)]), "html", null, true);
+            echo "\">edit</a>
+                    </td>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 24
+        // line 29
         echo "            </tbody>
         </table>
         <a class=\"btn btn-success\" href=\"";
-        // line 26
+        // line 31
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_product");
         echo "\">add</a>
     </div>
@@ -147,7 +158,7 @@ class __TwigTemplate_3a36401bcae4839d1ba83ad4c923108e extends Template
      */
     public function getDebugInfo()
     {
-        return array (  115 => 26,  111 => 24,  102 => 21,  98 => 20,  94 => 19,  90 => 18,  87 => 17,  83 => 16,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  126 => 31,  122 => 29,  113 => 26,  107 => 23,  102 => 21,  98 => 20,  94 => 19,  90 => 18,  87 => 17,  83 => 16,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -173,7 +184,12 @@ class __TwigTemplate_3a36401bcae4839d1ba83ad4c923108e extends Template
                     <td>{{ product.price }}</td>
                     <td>{{ product.size}}</td>
                     <td>{{ product.stock }}</td>
-                </tr>
+                  <td>
+                      <a class=\"btn btn-danger\" href=\"{{ path('product_delete',{id:product.id}) }}\">delete</a>
+                  </td>
+                    <td>
+                        <a class=\"btn btn-warning\" href=\"{{ path('product_edit',{id:product.id}) }}\">edit</a>
+                    </td>
             {% endfor %}
             </tbody>
         </table>

@@ -52,5 +52,26 @@ class BezoekerController extends AbstractController
         ]);
     }
 
+    #[Route('/product/delete/{id}', name: 'product_delete')]
+    public function delete(EntityManagerInterface $entityManager, int $id): Response
+    {
+        $product = $entityManager->getRepository(Product::class)->find($id);
+        $entityManager->remove($product);
+        $entityManager->flush();
+        return $this->redirectToRoute('app_product', [
+            'id' => $product->getId() ]);
+
+    }
+    #[Route('/product/edit/{id}', name: 'product_edit')]
+    public function update(EntityManagerInterface $entityManager, int $id): Response
+    {
+        $product = $entityManager->getRepository(Product::class)->find($id);
+        $product->setName('New product name!');
+        $entityManager->flush();
+        return $this->redirectToRoute('app_product', [
+            'id' => $product->getId()
+        ]);
+    }
+
 }
 

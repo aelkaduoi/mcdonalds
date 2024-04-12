@@ -71,7 +71,6 @@ class __TwigTemplate_2f3ecf33d2662857c643fd6f485938ca extends Template
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 4, $this->source); })()), 'form');
         echo "
     </div>
-
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -112,7 +111,6 @@ class __TwigTemplate_2f3ecf33d2662857c643fd6f485938ca extends Template
     <div class=\"container\">
         {{ form(form) }}
     </div>
-
 {% endblock %}", "bezoeker/new.html.twig", "C:\\xampp\\htdocs\\mcdonalds\\templates\\bezoeker\\new.html.twig");
     }
 }

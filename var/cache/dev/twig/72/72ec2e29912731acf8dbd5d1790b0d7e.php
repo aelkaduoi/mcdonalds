@@ -97,11 +97,15 @@ class __TwigTemplate_e6c7d4d0f9f6680db6103bd9bd921a65 extends Template
         echo "! en ";
         echo twig_escape_filter($this->env, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 12, $this->source); })()), "html", null, true);
         echo " ✅</h1>
-
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code>C:/xampp/htdocs/mcdonalds/src/Controller/BezoekerController.php</code></li>
         <li>Your template at <code>C:/xampp/htdocs/mcdonalds/templates/bezoeker/index.html.twig</code></li>
+        <a class=\"btn btn-success\" href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_product");
+        echo "\">add</a>
+
     </ul>
 </div>
 ";
@@ -134,7 +138,7 @@ class __TwigTemplate_e6c7d4d0f9f6680db6103bd9bd921a65 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  106 => 17,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -151,11 +155,12 @@ class __TwigTemplate_e6c7d4d0f9f6680db6103bd9bd921a65 extends Template
 
 <div class=\"example-wrapper\">
     <h1>Hello {{ controller_name }}! en {{ user}} ✅</h1>
-
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code>C:/xampp/htdocs/mcdonalds/src/Controller/BezoekerController.php</code></li>
         <li>Your template at <code>C:/xampp/htdocs/mcdonalds/templates/bezoeker/index.html.twig</code></li>
+        <a class=\"btn btn-success\" href=\"{{ path('app_product') }}\">add</a>
+
     </ul>
 </div>
 {% endblock %}
