@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
+
 class BezoekerController extends AbstractController
 {
     #[Route('/bezoeker', name: 'app_bezoeker')]
@@ -42,7 +43,7 @@ class BezoekerController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                 'success',
-                'Your changes were saved!'
+                'Your added a new product!'
             );
             return $this->redirectToRoute('app_product');
 
@@ -72,9 +73,10 @@ class BezoekerController extends AbstractController
             $task = $form->getData();
             $entityManager->persist($product);
             $entityManager->flush();
+            $name=$product->getName();
             $this->addFlash(
                 'success',
-                'updated!'
+                "you have Updated $name!"
             );
             return $this->redirectToRoute('app_product');
 
