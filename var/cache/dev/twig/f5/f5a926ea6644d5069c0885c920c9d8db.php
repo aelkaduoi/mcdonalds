@@ -94,7 +94,7 @@ class __TwigTemplate_3a36401bcae4839d1ba83ad4c923108e extends Template
             echo "</td>
                     <td>";
             // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "Category", [], "any", false, false, false, 22), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["product"], "Category", [], "any", false, false, false, 22), "name", [], "any", false, false, false, 22), "html", null, true);
             echo "</td>
                     <td>";
             // line 23
@@ -192,7 +192,7 @@ class __TwigTemplate_3a36401bcae4839d1ba83ad4c923108e extends Template
             {% for product in products %}
                 <tr>
                     <td>{{ product.name }}</td>
-                    <td>{{ product.Category }}</td>
+                    <td>{{ product.Category.name }}</td>
                     <td>{{ product.price }}</td>
                     <td>{{ product.size}}</td>
                     <td>{{ product.stock }}</td>

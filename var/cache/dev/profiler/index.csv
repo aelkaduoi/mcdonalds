@@ -264,3 +264,9 @@ c7bef5,127.0.0.1,GET,http://127.0.0.1:8000/product,1712919327,6e57c7,500,request
 6e57c7,127.0.0.1,GET,http://127.0.0.1:8000/product,1712919327,,500,request
 225464,127.0.0.1,GET,http://127.0.0.1:8000/product,1712919378,,200,request
 449e6a,127.0.0.1,GET,http://127.0.0.1:8000/new/product,1712919381,,200,request
+1ec895,127.0.0.1,GET,http://127.0.0.1:8000/,1712923415,,404,request
+cdf689,127.0.0.1,GET,http://127.0.0.1:8000/product,1712923421,,200,request
+3031be,127.0.0.1,GET,http://127.0.0.1:8000/new/product,1712923423,,200,request
+963599,127.0.0.1,GET,http://127.0.0.1:8000/product,1712923660,,200,request
+dd8b14,127.0.0.1,GET,http://127.0.0.1:8000/new/product,1712923666,,200,request
+5d59c0,127.0.0.1,GET,http://127.0.0.1:8000/product,1712923879,,200,request
